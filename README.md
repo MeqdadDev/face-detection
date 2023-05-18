@@ -10,4 +10,6 @@
 
 ## * Face Detection using Haar Cascade
 ### * [Collect Data (Face Images)](/haarcascade/1%20collect_face.py)
+### * [Train Model](/haarcascade/2%20train_model.py)
+### * [Detect Faces](/haarcascade/3%20detect_face.py)
 
