@@ -21,14 +21,21 @@ current_path = os.getcwd()
 
 new_path = os.path.join(current_path, "CollectedFaces")
 
-os.mkdir(new_path)
+try:
+    os.mkdir(new_path)
+except FileExistsError:
+    print("CollectedFaces is already created...")
 
 # Your name here....
 name = input("Enter your name to be recognized: ")
 
 full_path = os.path.join(new_path, name)
 
-os.mkdir(full_path)
+try:
+    os.mkdir(full_path)
+except FileExistsError:
+    print(f"{name} directory is already created... Previous images will be deleted.")
+
 
 cam = cv.VideoCapture(0)
 
